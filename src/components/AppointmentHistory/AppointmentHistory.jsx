@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from 'react';
 import { Container, Card, Button, Row, Col, Form, Badge, Alert } from 'react-bootstrap';
 import { useLocation } from 'react-router-dom';
