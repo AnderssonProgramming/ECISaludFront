@@ -1,70 +1,190 @@
-# Getting Started with Create React App
+# 🏥 ECISalud Frontend - Medical Appointments Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
+  
+  ![ECISalud Logo](src/assets/images/logo.svg)
+  
+  _Author: **Andersson David Sánchez Méndez** - Group 3_
+  
+  [![React](https://img.shields.io/badge/React-18.2.0-blue.svg)](https://reactjs.org/)
+  [![React Bootstrap](https://img.shields.io/badge/React%20Bootstrap-2.7.4-purple.svg)](https://react-bootstrap.github.io/)
+  [![React Router](https://img.shields.io/badge/React%20Router-6.11.2-red.svg)](https://reactrouter.com/)
+  [![Axios](https://img.shields.io/badge/Axios-1.4.0-green.svg)](https://axios-http.com/)
+  [![Azure](https://img.shields.io/badge/Azure-Deployed-blue.svg)](https://azure.microsoft.com/)
+  [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+  [![ESLint](https://img.shields.io/badge/ESLint-8.44.0-4B32C3?logo=eslint)](https://eslint.org/)
+  
+</div>
 
-## Available Scripts
+## 📋 Description
 
-In the project directory, you can run:
+ECISalud Frontend is a modern React application providing a user-friendly interface for the ECISalud medical appointment management system. This application allows patients to explore available medical specialties, schedule appointments, and manage their appointment history. The frontend connects to a Spring Boot backend API deployed on Azure, with enhanced features for a seamless user experience.
 
-### `npm start`
+## 🔧 Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **React 18**: JavaScript library for building user interfaces
+- **React Router DOM 6**: For client-side routing and navigation
+- **React Bootstrap**: UI component library for responsive design
+- **Axios**: HTTP client for API requests
+- **React Hooks**: For state management and side effects
+- **CSS Modules**: For component-scoped styling
+- **Azure Static Web Apps**: For hosting and deployment
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## ✨ Features
 
-### `npm test`
+### 1. **Home Page** 
+- Displays 4 medical specialties in a 2x2 grid layout
+- Each specialty card includes an image and name
+- Responsive design for all device sizes
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 2. **Specialty Details**
+- Expanded view of the selected specialty
+- Detailed information including:
+  - Specialty description
+  - Doctor name and credentials
+  - Clinic location
+  - Large specialty image
+- "Schedule Appointment" button
 
-### `npm run build`
+### 3. **Appointment Scheduling**
+- User-friendly form with real-time validation
+- Required fields: full name, ID number, email
+- Date selection with calendar picker
+- Prevents selection of past dates
+- Appointment summary display
+- Success confirmation after submission
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 4. **Appointment History**
+- Lists all appointments for a user (by email)
+- Displays appointment details:
+  - Appointment ID
+  - Specialty name
+  - Scheduled date
+  - Current status
+- Status filtering (Confirmed/Cancelled)
+- Ability to cancel active appointments
+- Color-coded status indicators (green for confirmed, red for cancelled)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 5. **Navigation**
+- Responsive navigation bar
+- Easy access to home and appointment history
+- Clinic logo and branding
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🚀 Setup and Running Instructions
 
-### `npm run eject`
+### Prerequisites
+- Node.js 14.x or higher
+- npm 6.x or higher
+- Connection to ECISalud backend API
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Installation
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Clone the repository
+   ```bash
+   git clone https://github.com/yourusername/ECISaludFront.git
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. Navigate to the project directory
+   ```bash
+   cd ECISaludFront
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. Install dependencies
+   ```bash
+   npm install
+   ```
 
-## Learn More
+4. Start the development server
+   ```bash
+   npm start
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+5. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Building for Production
 
-### Code Splitting
+```bash
+npm run build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The build artifacts will be stored in the `build/` directory.
 
-### Analyzing the Bundle Size
+## 🌐 API Integration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The frontend connects to the ECISalud backend API deployed on Azure:
+```
+https://god-fwcafqgvhvbdfthh.canadacentral-01.azurewebsites.net/
+```
 
-### Making a Progressive Web App
+API endpoints used:
+- `GET /api/specialties`: Retrieve all medical specialties
+- `GET /api/specialties/{id}`: Get specialty details by ID
+- `POST /api/appointments`: Create a new appointment
+- `GET /api/appointments/email/{email}`: Get appointments by user email
+- `GET /api/appointments/filter?email={email}&status={status}`: Filter appointments
+- `PUT /api/appointments/{id}/cancel`: Cancel an appointment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 📸 Screenshots
 
-### Advanced Configuration
+### Home Page
+![Home Page](placeholder-for-home-screenshot.png)
+*Grid display of available medical specialties*
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Specialty Details
+![Specialty Details](placeholder-for-specialty-details-screenshot.png)
+*Detailed view of a medical specialty with booking option*
 
-### Deployment
+### Appointment Form
+![Appointment Form](placeholder-for-appointment-form-screenshot.png)
+*Form for scheduling a new medical appointment*
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Appointment History
+![Appointment History](placeholder-for-appointment-history-screenshot.png)
+*List of user appointments with filtering options*
 
-### `npm run build` fails to minify
+## 📂 Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+ECISaludFront/
+├── public/
+│   ├── index.html
+│   ├── logo192.png
+│   └── logo512.png
+├── src/
+│   ├── components/
+│   │   ├── AppointmentForm/
+│   │   │   └── AppointmentForm.jsx
+│   │   ├── AppointmentHistory/
+│   │   │   └── AppointmentHistory.jsx
+│   │   ├── Home/
+│   │   │   └── Home.jsx
+│   │   ├── Navigation/
+│   │   │   └── Navigation.jsx
+│   │   └── SpecialtyDetail/
+│   │       └── SpecialtyDetail.jsx
+│   ├── services/
+│   │   └── api.js
+│   ├── App.js
+│   ├── index.js
+│   └── logo.svg
+└── package.json
+```
+
+## 👨‍💻 Development Guidelines
+
+- Follow React best practices
+- Use functional components and hooks
+- Keep components small and focused
+- Validate all user inputs
+- Handle API errors gracefully
+- Maintain responsive design
+- Use semantic HTML elements
+
+## 📈 Future Enhancements
+
+- User authentication and profiles
+- Doctor availability calendar
+- Push notifications for appointment reminders
+- Online payment integration
+- Telehealth video consultations
+- Multi-language support

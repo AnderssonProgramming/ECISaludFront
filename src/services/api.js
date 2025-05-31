@@ -1,6 +1,8 @@
 import axios from 'axios';
 
-// Base URL for Azure-deployed backend
+// Base URL for locally deployed backend
+//const API_BASE_URL = 'http://localhost:8081/api';
+// Base URL for deployed backend (uncomment if needed)
 const API_BASE_URL = 'https://god-fwcafqgvhvbdfthh.canadacentral-01.azurewebsites.net/api';
 
 // API instance with default config

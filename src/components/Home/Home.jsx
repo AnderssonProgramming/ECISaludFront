@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { getSpecialties } from '../../../services/api';
+import { getSpecialties } from '../../services/api';
 import './Home.css';
 
 const Home = () => {
