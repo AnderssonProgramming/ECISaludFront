@@ -3,7 +3,7 @@ import { Navbar, Nav, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Navigation.css';
 // Import the logo directly from the source
-import logo from '../../logo.svg';
+import logo from '../../assets/images/logo.svg';
 
 const Navigation = () => {
   return (

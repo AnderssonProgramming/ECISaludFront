@@ -125,19 +125,20 @@ API endpoints used:
 ## 📸 Screenshots
 
 ### Home Page
-![Home Page](placeholder-for-home-screenshot.png)
+
+![Home Page](src/assets/home-page.png)
 *Grid display of available medical specialties*
 
 ### Specialty Details
-![Specialty Details](placeholder-for-specialty-details-screenshot.png)
+![Specialty Details](src/assets/specialty-details.png)
 *Detailed view of a medical specialty with booking option*
 
 ### Appointment Form
-![Appointment Form](placeholder-for-appointment-form-screenshot.png)
+![Appointment Form](src/assets/appointment-form.png)
 *Form for scheduling a new medical appointment*
 
 ### Appointment History
-![Appointment History](placeholder-for-appointment-history-screenshot.png)
+![Appointment History](src/assets/appointment-history.png)
 *List of user appointments with filtering options*
 
 ## 📂 Project Structure
