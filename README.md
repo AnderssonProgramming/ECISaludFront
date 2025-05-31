@@ -10,7 +10,6 @@
   [![React Bootstrap](https://img.shields.io/badge/React%20Bootstrap-2.7.4-purple.svg)](https://react-bootstrap.github.io/)
   [![React Router](https://img.shields.io/badge/React%20Router-6.11.2-red.svg)](https://reactrouter.com/)
   [![Axios](https://img.shields.io/badge/Axios-1.4.0-green.svg)](https://axios-http.com/)
-  [![Azure](https://img.shields.io/badge/Azure-Deployed-blue.svg)](https://azure.microsoft.com/)
   [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
   [![ESLint](https://img.shields.io/badge/ESLint-8.44.0-4B32C3?logo=eslint)](https://eslint.org/)
   
@@ -28,7 +27,6 @@ ECISalud Frontend is a modern React application providing a user-friendly interf
 - **Axios**: HTTP client for API requests
 - **React Hooks**: For state management and side effects
 - **CSS Modules**: For component-scoped styling
-- **Azure Static Web Apps**: For hosting and deployment
 
 ## ✨ Features
 
@@ -81,7 +79,7 @@ ECISalud Frontend is a modern React application providing a user-friendly interf
 
 1. Clone the repository
    ```bash
-   git clone https://github.com/yourusername/ECISaludFront.git
+   git clone https://github.com/AnderssonProgramming/ECISaludFront.git
    ```
 
 2. Navigate to the project directory
